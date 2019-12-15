@@ -1,8 +1,13 @@
 @import "bootstrap/bootstrap.scss";
 
+a:link {
+text-decoration:none;
+} 
+
 #title {
     margin:20px;
 }
+
 .case {
     border: 1px solid #CCC;
     margin: 10px;

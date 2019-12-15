@@ -9875,6 +9875,10 @@ h3 {
     border-color: #dee2e6;
   }
 }
+a:link {
+  text-decoration: none;
+}
+
 #title {
   margin: 20px;
 }

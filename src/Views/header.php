@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="FD">
-    <title>Memory O'Clock</title>
+    <title><?php echo $this->data['title']; ?></title>
 
     <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">-->
 
@@ -18,6 +18,11 @@
 </head>
 
 <body>
-    <header>
-        
-    </header>
+    <main role="main" class="inner cover">
+        <header>
+            <div id="title" class="text-center">
+                <div class="container">
+                    <h1><?php echo $this->data['title']; ?></h1>
+                </div>
+            </div>
+        </header>
