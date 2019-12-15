@@ -4,6 +4,6 @@ namespace Controllers;
 
 class Memory
 {
-
+    
 }
 ?>
