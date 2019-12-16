@@ -12,7 +12,7 @@ class DBConstants
     }
 
     const DSN = "mysql:dbname=memory;host=127.0.0.1";
-
+    
     function showDSN() {
         echo  self::DSN. "\n";
     }

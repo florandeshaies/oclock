@@ -22,14 +22,14 @@ class UserDAO
         return $statment->execute([$name]);
     }
 
-    public function read_by_id($id)
+    public function readById($id)
     {
         $query = "SELECT name FROM user WHERE id=?";
         $statment = $this->instance_PDO->prepare($query);
         return $statment->execute([$id]);
     }
 
-    public function read_by_name($name)
+    public function readByName($name)
     {
         $query = "SELECT id FROM user WHERE name=?";
         $statment = $this->instance_PDO->prepare($query);

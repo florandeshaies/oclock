@@ -2,7 +2,8 @@
 
 namespace DAO;
 
-use Utils\Connection;
+//use Utils\Connection;
+use Utils\MySql;
 
 class GameDAO
 {

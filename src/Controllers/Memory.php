@@ -3,11 +3,13 @@
 namespace Controllers;
 
 use Constants\DBConstants;
+use Models\User;
 
 class Memory
 {
 
     public $data;
+    public $user;
 
     private function home()
     {
@@ -23,13 +25,17 @@ class Memory
 
     private function game()
     {
+        if (TRUE) { //s'il n'existe pas encore
+            $this->user = new User();
+            $this->user->setName($_POST['name']);
+        }
         $this->data['title'] = 'Memory O\'Clock ! - Partie en cours';
         require __DIR__ . '/../Views/header.php';
         require __DIR__ . '/../Views/game_view.php';
         require __DIR__ . '/../Views/footer.php';
     }
 
-    public function display()
+    public function index()
     {
         if (isset($_POST['name']) && ($_POST['name'] != '')) {
             $this->game();
@@ -37,4 +43,5 @@ class Memory
             $this->home();
         }
     }
+
 }

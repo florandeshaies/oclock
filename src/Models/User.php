@@ -2,6 +2,8 @@
 
 namespace Models;
 
+use DAO\UserDAO;
+
 class User
 {
     
@@ -14,6 +16,11 @@ class User
     * user name
     */
     private $name;
+    
+    /**
+    * user DAO
+    */
+    private $user_DAO;
     
 
     /**
@@ -37,6 +44,8 @@ class User
     */
     public function setName($name)
     {
+        $this->user_DAO = new UserDAO();
+        $this->user_DAO->create($name);
         $this->name = $name;
     }
 
